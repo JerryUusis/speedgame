@@ -1,0 +1,60 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+main {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.text-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: black 1px solid;
+}
+
+section {
+    padding: 2rem;
+    outline: pink solid 1px;
+}
+
+.results {
+    padding: 1rem
+}
+
+table {
+    border-collapse: collapse;
+}
+
+tr,
+td {  
+    border: black 1px solid;
+    padding: 0.5rem;
+}
+
+.results li {
+    display: flex;
+    justify-content: space-around;
+    outline: 1px solid black;
+}
+
+.button {
+    padding: 5rem;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+.button + .button {
+    margin-left: 2rem;
+}
+
+.button-container {
+    display: flex;
+    padding: 5rem;
+}
