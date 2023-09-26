@@ -8,9 +8,15 @@
 </head>
 <body>
     <main>
+        <div class="overlay">
+            <div class="modal">
+                <h2></h2>
+                <p></p>
+            </div>
+        </div>
         <h1>Nopeustesti</h1>
         <h2>Lopputulos</h2>
-        <h3>100</h3>
+        <span class="score">0</span>
         <div class="text-container">
             <section class="manual">
                 <h2>Käyttöohjeet</h2>
@@ -73,12 +79,13 @@
 
 
             <div class="button-container">
-                <div class="button" id="first-button"></div>
-                <div class="button"id="second-button"></div>
-                <div class="button" id="third-button"></div>
-                <div class="button" id="fourth-button"></div>
+                <div class="circle" id="first-button">0</div>
+                <div class="circle"id="second-button">1</div>
+                <div class="circle" id="third-button">2</div>
+                <div class="circle" id="fourth-button">3</div>
             </div>
-
+            <button id="start-button">Aloita</button>
+            <button id="end-button">Lopeta</button>
     </main>
     <script src="main.js"></script>
 </body>

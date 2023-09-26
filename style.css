@@ -1,9 +1,11 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 main {
+    /* background-color: rgb(190, 149, 74); */
     height: 100vh;
     width: 100vw;
     display: flex;
@@ -11,6 +13,19 @@ main {
     align-items: center;
     flex-direction: column;
 }
+
+/* Modal section */
+
+/* .overlay {
+    background-color: rgb(rgba(15, 14, 14, 0.755));
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+}
+
+.modal {
+    background-color: white;
+} */
 
 .text-container {
     display: flex;
@@ -44,17 +59,33 @@ td {
     outline: 1px solid black;
 }
 
-.button {
+.circle {
     padding: 5rem;
     border: 1px solid black;
     border-radius: 50%;
 }
 
-.button + .button {
+.circle + .circle {
     margin-left: 2rem;
 }
 
 .button-container {
     display: flex;
     padding: 5rem;
+}
+
+#first-button {
+    background-color: rgb(211, 4, 18);
+}
+
+#second-button {
+    background-color: rgb(240, 203, 27);
+}
+
+#third-button {
+    background-color: rgb(199, 62, 5);
+}
+
+#fourth-button {
+    background-color: rgb(38, 154, 67);
 }
