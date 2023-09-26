@@ -4,6 +4,8 @@ const startButton = document.querySelector("#start-button");
 const endButton = document.querySelector("#end-button");
 const circles = document.querySelectorAll(".circle");
 const scoreDisplay = document.querySelector(".score");
+const closeButton = document.querySelector(".close-button");
+const overlay = document.querySelector(".overlay");
 let score = 0;
 let timer;
 let timerSpeed = 1000;
@@ -76,7 +78,12 @@ function resetGame() {
     window.location.reload();
 }
 
+function closeModal() {
+    overlay.style.display = "none";
+}
+
 // Event listeners
 
 startButton.addEventListener("click", startGame);
 endButton.addEventListener("click", endGame);
+closeButton.addEventListener("click", closeModal)
