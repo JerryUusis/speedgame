@@ -71,7 +71,7 @@ function startGame() {
 
 function endGame() {
     clearTimeout(timer);
-    resetGame();
+    overlay.style.display = "flex";
 }
 
 function resetGame() {
@@ -79,7 +79,7 @@ function resetGame() {
 }
 
 function closeModal() {
-    overlay.style.display = "none";
+    resetGame();
 }
 
 // Event listeners
