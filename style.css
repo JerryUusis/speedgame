@@ -63,6 +63,7 @@ td {
     padding: 5rem;
     border: 1px solid black;
     border-radius: 50%;
+    pointer-events: none;
 }
 
 .circle + .circle {
@@ -74,18 +75,22 @@ td {
     padding: 5rem;
 }
 
-#first-button {
+.circle:nth-child(1) {
     background-color: rgb(211, 4, 18);
 }
 
-#second-button {
+.circle:nth-child(2){
     background-color: rgb(240, 203, 27);
 }
 
-#third-button {
+.circle:nth-child(3){
     background-color: rgb(199, 62, 5);
 }
 
-#fourth-button {
+.circle:nth-child(4){
     background-color: rgb(38, 154, 67);
+}
+
+.circle.active {
+   filter: saturate(5);
 }
