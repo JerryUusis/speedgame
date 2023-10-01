@@ -71,6 +71,7 @@ function startGame() {
 
 function endGame() {
     clearTimeout(timer);
+    circles.forEach(item => item.classList.remove("active"));
     overlay.style.display = "flex";
 }
 
