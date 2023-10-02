@@ -7,85 +7,90 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <main>
-        <div class="overlay">
-            <div class="modal">
-                <h2>Pisteesi</h2>
-                <span class="score">0</span>
-                <p class="close-button">Sulje</p>
-            </div>
-        </div>
-        <h1>Nopeustesti</h1>
-        <h2>Lopputulos</h2>
-        <span class="score">0</span>
-        <div class="text-container">
-            <section class="manual">
-                <h2>Käyttöohjeet</h2>
-                <ol>
-                    <li>Paina pelin jalassa olevaa starttipainiketta. Testi alkaa noin 4 sekunnin kuluttua</li>
-                    <li>Laite sytyttää valopainikkeita yksi kerrallaan aluksi hitaasti, mutta koko ajan nopeutuen</li>
-                    <li>Kuittaa painamalla syttynyttä painiketta HETI</li>
-                    <li>Testi hatkuu kiihtyvällä nopeudella kunnes painat väärin</li>
-                    <li>Vertaa näytössä olevaa lopputulosta pistetaulukkoon</li>
-                </ol>
-                <p>Huom älä paina painikkeita sekuntia kauempaa tai testi keskeytyy</p>
-            </section>
-
-            <section class="results-container">
-                <table class="results">
-                  <tr>
-                    <td>  </td>
-                    <td>...</td>
-                    <td>10</td>
-                    <td>Yritä uudelleen</td>
-                  </tr>
-                  <tr>
-                    <td>10</td>
-                    <td>...</td>
-                    <td>20</td>
-                    <td>Harjoittele</td>
-                  </tr>
-                  <tr>
-                    <td>20</td>
-                    <td>...</td>
-                    <td>30</td>
-                    <td>Kehityskelpoinen</td>
-                  </tr>
-                  <tr>
-                    <td>30</td>
-                    <td>...</td>
-                    <td>50</td>
-                    <td>Nopea</td>
-                  </tr>
-                  <tr>
-                    <td>50</td>
-                    <td>...</td>
-                    <td>70</td>
-                    <td>Erittäin nopea</td>
-                  </tr>
-                  <tr>
-                    <td>70</td>
-                    <td>...</td>
-                    <td>100</td>
-                    <td>Ällistyttävä</td>
-                  </tr>
-                  <tr>
-                    <td>100</td>
-                    <td>...</td>
-                    <td>  </td>
-                    <td>Uskomaton</td>
-                </table>
-            </section>
-        </div>
-            <div class="button-container">
-                <div class="circle" id="first-button">0</div>
-                <div class="circle"id="second-button">1</div>
-                <div class="circle" id="third-button">2</div>
-                <div class="circle" id="fourth-button">3</div>
-            </div>
-            <button id="start-button">Aloita</button>
-            <button id="end-button">Lopeta</button>
-    </main>
+    <div class="main-container">
+      <main>
+          <div class="overlay">
+              <div class="modal">
+                  <h2>Pisteesi</h2>
+                  <span class="score">0</span>
+                  <p class="close-button">Sulje</p>
+              </div>
+          </div>
+          <div class="title-container">
+            <h1>Nopeustesti</h1>
+            <h2>Lopputulos</h2>
+            <span class="score">0</span>
+          </div>
+          <div class="text-container">
+              <section class="manual">
+                  <h2>Käyttöohjeet</h2>
+                  <ol>
+                      <li>Paina pelin jalassa olevaa starttipainiketta. Testi alkaa noin 4 sekunnin kuluttua</li>
+                      <li>Laite sytyttää valopainikkeita yksi kerrallaan aluksi hitaasti, mutta koko ajan nopeutuen</li>
+                      <li>Kuittaa painamalla syttynyttä painiketta HETI</li>
+                      <li>Testi hatkuu kiihtyvällä nopeudella kunnes painat väärin</li>
+                      <li>Vertaa näytössä olevaa lopputulosta pistetaulukkoon</li>
+                  </ol>
+                  <p>Huom älä paina painikkeita sekuntia kauempaa tai testi keskeytyy</p>
+              </section>
+              <section class="results-container">
+                  <table class="results">
+                    <tr>
+                      <td>  </td>
+                      <td>...</td>
+                      <td>10</td>
+                      <td>Yritä uudelleen</td>
+                    </tr>
+                    <tr>
+                      <td>10</td>
+                      <td>...</td>
+                      <td>20</td>
+                      <td>Harjoittele</td>
+                    </tr>
+                    <tr>
+                      <td>20</td>
+                      <td>...</td>
+                      <td>30</td>
+                      <td>Kehityskelpoinen</td>
+                    </tr>
+                    <tr>
+                      <td>30</td>
+                      <td>...</td>
+                      <td>50</td>
+                      <td>Nopea</td>
+                    </tr>
+                    <tr>
+                      <td>50</td>
+                      <td>...</td>
+                      <td>70</td>
+                      <td>Erittäin nopea</td>
+                    </tr>
+                    <tr>
+                      <td>70</td>
+                      <td>...</td>
+                      <td>100</td>
+                      <td>Ällistyttävä</td>
+                    </tr>
+                    <tr>
+                      <td>100</td>
+                      <td>...</td>
+                      <td>  </td>
+                      <td>Uskomaton</td>
+                  </table>
+              </section>
+          </div>
+              <div class="circle-container">
+                  <div class="circle" id="first-button"></div>
+                  <div class="circle"id="second-button"></div>
+                  <div class="circle" id="third-button"></div>
+                  <div class="circle" id="fourth-button"></div>
+              </div>
+              <div class="button-container">
+                <button id="start-button">Aloita</button>
+                <button id="end-button">Lopeta</button>
+              </div>
+      </main>
+    </div>
     <script src="main.js"></script>
 </body>
 </html>

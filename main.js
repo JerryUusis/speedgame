@@ -87,4 +87,4 @@ function closeModal() {
 
 startButton.addEventListener("click", startGame);
 endButton.addEventListener("click", endGame);
-closeButton.addEventListener("click", closeModal)
+closeButton.addEventListener("click", closeModal);

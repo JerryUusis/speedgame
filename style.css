@@ -4,14 +4,40 @@
     box-sizing: border-box;
 }
 
-main {
-    /* background-color: rgb(190, 149, 74); */
+.title-container {
+    padding: 2rem;
+    text-align: center;
+
+    margin: 1rem;
+}
+
+h1 {
+    font-size: 5rem;
+}
+
+span {
+    font-size: 1.5rem;
+}
+
+.main-container {
+
     height: 100vh;
     width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+main {
+    /* background-color: rgb(190, 149, 74); */
+    width: 95%;
+    height: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
+    border: 15px black solid;
+    border-radius: 50px;
 }
 
 /* Modal section */
@@ -32,6 +58,7 @@ main {
     padding: 4rem;
     margin: auto;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: white;
@@ -48,17 +75,25 @@ main {
 .text-container {
     display: flex;
     justify-content: center;
-    align-items: center;
-    outline: black 1px solid;
 }
 
 section {
-    padding: 2rem;
-    outline: pink solid 1px;
+    padding: 1.5rem;
+    margin: 0 3rem;
+}
+
+section.manual {
+    border: solid black 5px;
+    border-radius: 20px;
+}
+
+section.results-container {
+    border: solid black 5px;
+    border-radius: 20px;
 }
 
 .results {
-    padding: 1rem
+    padding: 1rem;
 }
 
 table {
@@ -67,7 +102,7 @@ table {
 
 tr,
 td {  
-    border: black 1px solid;
+    text-transform: uppercase;
     padding: 0.5rem;
 }
 
@@ -77,9 +112,14 @@ td {
     outline: 1px solid black;
 }
 
+.circle-container {
+    display: flex;
+    padding: 3rem;
+}
+
 .circle {
     padding: 5rem;
-    border: 1px solid black;
+    border: 5px solid black;
     border-radius: 50%;
     pointer-events: none;
 }
@@ -90,22 +130,27 @@ td {
 
 .button-container {
     display: flex;
-    padding: 5rem;
 }
+
+button {
+    padding: 1rem;
+}
+
+
 
 .circle:nth-child(1) {
     background-color: rgb(211, 4, 18);
 }
 
-.circle:nth-child(2){
+.circle:nth-child(2) {
     background-color: rgb(240, 203, 27);
 }
 
-.circle:nth-child(3){
+.circle:nth-child(3) {
     background-color: rgb(199, 62, 5);
 }
 
-.circle:nth-child(4){
+.circle:nth-child(4) {
     background-color: rgb(38, 154, 67);
 }
 
