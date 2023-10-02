@@ -97,7 +97,7 @@ main {
     position: absolute;
     top: 0;
     right: 0;
-    padding: 1rem;
+    padding: 2rem;
 }
 
 /* Main text section */
@@ -120,7 +120,8 @@ section.manual {
 }
 
 section h2 {
-    padding: 0.5rem;
+
+    padding-top: 0.5rem 0;
 }
 
 section.results-container {
@@ -163,10 +164,10 @@ button:hover {
     filter: 
         saturate(1.3) 
         brightness(1.3);
-    animation: hover-animation infinite alternate 200ms ease-in-out;
+    animation: box-shadow-animation infinite alternate 200ms ease-in-out;
 }
 
-@keyframes hover-animation {
+@keyframes box-shadow-animation {
     from {box-shadow: 0 0 0;}
     to {box-shadow: 0 0 5px;}
 }
@@ -198,9 +199,17 @@ button:hover {
         inset 0 0 5px #333,
         0 0 5px #333;
 }
+
+@keyframes filter-animation {
+    from {filter: brightness(1);}
+    to {filter: brightness(1.75);}
+}
     
 .circle.active {
-    filter: saturate(3) brightness(5);
+    filter: saturate(3);
+    animation: 
+        box-shadow-animation infinite alternate 200ms ease-in-out,
+        filter-animation infinite alternate 300ms linear;
  }
 
 .circle + .circle {
