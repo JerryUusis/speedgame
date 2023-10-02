@@ -7,6 +7,11 @@
     --main-backround-color: rgb(134 25 21);
 }
 
+@font-face {
+    font-family: "ARCADE";
+    src: url(arcade/ARCADE.TTF);
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -25,6 +30,9 @@
 
 h1 {
     font-size: 5rem;
+    font-family: 'ARCADE';
+    font-weight: 400;
+    letter-spacing: 10px;
 }
 
 span {
@@ -38,6 +46,7 @@ span {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
 }
 
 main {
@@ -79,6 +88,11 @@ main {
     position: relative;
 }
 
+.modal h2 {
+    text-transform: uppercase;
+    padding: 1rem;
+}
+
 .close-button {
     position: absolute;
     top: 0;
@@ -100,6 +114,11 @@ section {
 section.manual {
     border: solid black 5px;
     border-radius: 20px;
+    padding: 2rem
+}
+
+section h2 {
+    padding: 0.5rem;
 }
 
 section.results-container {
@@ -132,7 +151,6 @@ td {
     padding: 3rem;
 }
 
-
 .circle {
     padding: 5rem;
     border: 5px solid black;
@@ -144,7 +162,7 @@ td {
     }
     
 .circle.active {
-    filter: saturate(5);
+    filter: saturate(3) brightness(5);
 
  }
 
@@ -163,8 +181,6 @@ button {
     border: black solid 1px;
     border-radius: 10px;
     box-shadow:  0 0 5px;
-
-
 }
 
 button + button {
