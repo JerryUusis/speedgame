@@ -3,7 +3,7 @@
 const startButton = document.querySelector("#start-button");
 const endButton = document.querySelector("#end-button");
 const circles = document.querySelectorAll(".circle");
-const scoreDisplay = document.querySelector(".score");
+const scoreDisplay = document.querySelectorAll(".score");
 const closeButton = document.querySelector(".close-button");
 const overlay = document.querySelector(".overlay");
 let score = 0;
@@ -22,8 +22,9 @@ function clickCircle(i) {
         return endGame();
     }
     rounds--;
+
     score += 1;
-    scoreDisplay.textContent = score;
+    scoreDisplay.forEach((points) => points.textContent = score)
 }
 
 circles.forEach((circle, i) => {
