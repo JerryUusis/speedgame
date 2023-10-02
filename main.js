@@ -60,7 +60,7 @@ function startGame() {
 
     timer = setTimeout(startGame, timerSpeed);
 
-    timerSpeed -= 10;
+    timerSpeed -= 5;
     rounds++;
 
     function pickNewNumber(activeNumber) {
