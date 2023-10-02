@@ -99,6 +99,8 @@ main {
     padding: 1rem;
 }
 
+/* Main text section */
+
 .text-container {
     display: flex;
     justify-content: center;
@@ -145,8 +147,16 @@ td {
     outline: 1px solid black;
 }
 
+/* Button section */
+
+#end-button {
+    display: none;
+}
+
 .button-container {
     display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 1rem;
 }
 
@@ -159,9 +169,9 @@ button {
     box-shadow:  0 0 5px;
 }
 
-button + button {
-    margin-left: 2rem;
-}
+
+
+/* Circle section */
 
 .circle-container {
     display: flex;
@@ -201,4 +211,3 @@ button + button {
 .circle:nth-child(4) {
     background-color: var(--green-button)
 }
-

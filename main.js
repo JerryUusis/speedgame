@@ -37,6 +37,9 @@ function enableEvents() {
 }
 
 function startGame() {
+    endButton.style.display = "flex";
+    startButton.style.display = "none";
+
     if (rounds >= 3) {
         return endGame();
     }
