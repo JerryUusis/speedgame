@@ -6,6 +6,8 @@ const circles = document.querySelectorAll(".circle");
 const scoreDisplay = document.querySelectorAll(".score");
 const closeButton = document.querySelector(".close-button");
 const overlay = document.querySelector(".overlay");
+const resultPrint = document.querySelector(".result-print");
+let resultMessage;
 let score = 0;
 let timer;
 let timerSpeed = 1000;
@@ -73,10 +75,31 @@ function startGame() {
     }
 }
 
+function printScore(score) {
+    if (score < 10) {
+        resultMessage = "Yritä uudelleen";
+    } else if (score > 9 && score < 20) {
+        resultMessage = "Harjoittele";
+    } else if (score >= 20 && score < 30) {
+        resultMessage = "Kehityskelpoinen";
+    } else if (score >= 30 && score < 40) {
+        resultMessage = "Nopea";
+    } else if (score >= 40 && score < 70) {
+        resultMessage = "Erittäin nopea";
+    } else if (score >= 70 && score < 100) {
+        resultMessage = "Ällistyttävä";
+    } else {
+        resultMessage = "Uskomaton";
+    }
+    return resultPrint.textContent = resultMessage;
+}
+
 function endGame() {
     clearTimeout(timer);
     circles.forEach(item => item.classList.remove("active"));
     overlay.style.display = "flex";
+    printScore(score);
+
 }
 
 function resetGame() {
