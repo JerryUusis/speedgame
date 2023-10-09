@@ -26,8 +26,8 @@
     padding: 1rem;
     text-align: center;
     border: black solid 5px;
-    border-radius: 50px;
-    margin: 1rem;
+    border-radius: 20px;
+    margin: 1rem 0;
 }
 
 .score-display-container {
@@ -51,7 +51,7 @@ span {
 .main-container {
     background-color: var(--main-backround-color);
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -134,6 +134,7 @@ section.manual {
     border-radius: 20px;
     padding: 1rem 2rem;
     min-width: 370px;
+    max-height: 320px;
 }
 
 .manual ol {
@@ -201,19 +202,22 @@ button:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1rem;
+    padding: 1rem 0;
+    
 }
 
 /* Circle section */
 
 .circle-container {
     display: flex;
-    padding: 1rem 3rem;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 .circle {
+    content: "";
     padding: 5rem;
-    margin-bottom: 1rem;
+    margin: 0 1rem;
     border: 5px solid black;
     border-radius: 50%;
     pointer-events: none;
@@ -234,10 +238,6 @@ button:hover {
         filter-animation infinite alternate 300ms linear;
  }
 
-.circle + .circle {
-    margin-left: 2rem;
-}
-
 .circle:nth-child(1) {
     background-color: var(--red-button)
 }
@@ -252,4 +252,109 @@ button:hover {
 
 .circle:nth-child(4) {
     background-color: var(--green-button)
+}
+
+
+/* Mobile optimization */
+@media screen and (max-width: 425px) {
+
+    main {
+        padding: 0;
+        margin: 0;
+        border: solid black 5px;
+        justify-content: space-evenly;
+
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    section {
+        display: none;
+    }
+
+    .title-container {
+        margin: 0;
+        padding: 0.25rem;
+    }
+
+    .score-container {
+        font-size: 0.75rem;
+    }
+
+    .results-container {
+        padding: 0;
+        margin: 0;
+    }
+
+    .circle-container {
+        width: 100vw;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .circle {
+        padding: 2rem;
+        margin: 0;
+    }
+
+    .modal {
+        width: 80%;
+        height: 80%;
+        justify-content: space-evenly;
+    }
+
+    .modal span {
+        font-size: 2rem;
+    }
+
+}
+
+/* Medium screen size */
+@media screen and (min-width: 426px) and (max-width: 880px) {
+
+    main {
+        padding: 0;
+        margin: 0;
+        border: solid black 5px;
+        justify-content: space-evenly;
+        height: 80%;
+    }
+
+    h1 {
+        font-size: 5vw;
+        margin: 0;
+        padding: 0;
+    }
+
+    .title-container {
+        width: 90%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .score-display-container {
+        font-size: 1.75vw;
+    }
+
+    section {
+        margin: 0;
+    }
+
+    .manual {
+        display: none;
+    }
+
+    .results-container {
+        padding: 0.5rem;
+    }
+
+    .circle-container {
+        width: 100%;
+    }
+
+    .circle {
+        padding: 7vw;
+    }
 }
