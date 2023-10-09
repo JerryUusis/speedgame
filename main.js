@@ -128,7 +128,7 @@ function updateHighScore() {
 }
 
 function buttonSound() {
-    new Audio("nopeustestiäänet_nappi.mp3").play();
+    new Audio("button_sample.mp3").play();
 }
 // Event listeners
 
