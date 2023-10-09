@@ -7,7 +7,9 @@ const scoreDisplay = document.querySelectorAll(".score");
 const closeButton = document.querySelector(".close-button");
 const overlay = document.querySelector(".overlay");
 const resultPrint = document.querySelector(".result-print");
+const highScore = document.querySelector("#high-score");
 let resultMessage;
+let sessionHighscore = 0;
 let score = 0;
 let timer;
 let timerSpeed = 1000;
@@ -70,7 +72,7 @@ function startGame() {
             console.log(newActive);
             return newActive;
         } else {
-            return pickNewNumber(activeNumber)
+            return pickNewNumber(activeNumber);
         }
     }
 }
@@ -99,15 +101,29 @@ function endGame() {
     circles.forEach(item => item.classList.remove("active"));
     overlay.style.display = "flex";
     printScore(score);
-
+    resetGame();
 }
 
 function resetGame() {
-    window.location.reload();
+    circles.forEach(item => item.style.pointerEvents = "none");
+    circles.forEach(item => item.removeEventListener("click", clickCircle));
+    rounds = 0;
 }
 
 function closeModal() {
-    resetGame();
+    overlay.style.display = "none";
+    endButton.style.display = "none";
+    startButton.style.display = "flex";
+    updateHighScore();
+}
+
+function updateHighScore() {
+    if (score > sessionHighscore) {
+        sessionHighscore = score;
+        highScore.textContent = sessionHighscore;
+    }
+    score = 0;
+    scoreDisplay.forEach(item => item.textContent = score);
 }
 
 // Event listeners
