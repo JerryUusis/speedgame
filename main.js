@@ -22,13 +22,14 @@ const getRandomNumber = (min, max) =>
     Math.floor(Math.random() * (max - min + 1)) + min;
 
 function clickCircle(i) {
+    buttonSound();
     if (i !== activeNumber) {
         return endGame();
     }
     rounds--;
 
     score += 1;
-    scoreDisplay.forEach((points) => points.textContent = score)
+    scoreDisplay.forEach((points) => points.textContent = score);
 }
 
 circles.forEach((circle, i) => {
@@ -126,6 +127,9 @@ function updateHighScore() {
     scoreDisplay.forEach(item => item.textContent = score);
 }
 
+function buttonSound() {
+    new Audio("nopeustestiäänet_nappi.mp3").play();
+}
 // Event listeners
 
 startButton.addEventListener("click", startGame);
