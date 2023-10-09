@@ -27,7 +27,7 @@
     text-align: center;
     border: black solid 5px;
     border-radius: 20px;
-    margin: 1rem;
+    margin: 1rem 0;
 }
 
 .score-display-container {
@@ -202,7 +202,8 @@ button:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1rem;
+    padding: 1rem 0;
+    
 }
 
 /* Circle section */
@@ -262,6 +263,7 @@ button:hover {
         margin: 0;
         border: solid black 5px;
         justify-content: space-evenly;
+
     }
 
     h1 {
@@ -286,12 +288,8 @@ button:hover {
         margin: 0;
     }
 
-    .button-container {
-        padding: 0;
-    }
-
     .circle-container {
-        width: 100%;
+        width: 100vw;
         display: flex;
         justify-content: space-evenly;
     }
@@ -311,4 +309,52 @@ button:hover {
         font-size: 2rem;
     }
 
+}
+
+/* Medium screen size */
+@media screen and (min-width: 426px) and (max-width: 880px) {
+
+    main {
+        padding: 0;
+        margin: 0;
+        border: solid black 5px;
+        justify-content: space-evenly;
+        height: 80%;
+    }
+
+    h1 {
+        font-size: 5vw;
+        margin: 0;
+        padding: 0;
+    }
+
+    .title-container {
+        width: 90%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .score-display-container {
+        font-size: 1.75vw;
+    }
+
+    section {
+        margin: 0;
+    }
+
+    .manual {
+        display: none;
+    }
+
+    .results-container {
+        padding: 0.5rem;
+    }
+
+    .circle-container {
+        width: 100%;
+    }
+
+    .circle {
+        padding: 7vw;
+    }
 }
