@@ -109,6 +109,7 @@ function resetGame() {
     circles.forEach(item => item.style.pointerEvents = "none");
     circles.forEach(item => item.removeEventListener("click", clickCircle));
     rounds = 0;
+    timer = 1000;
 }
 
 function closeModal() {
