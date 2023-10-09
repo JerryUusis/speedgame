@@ -51,7 +51,7 @@ span {
 .main-container {
     background-color: var(--main-backround-color);
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -208,12 +208,15 @@ button:hover {
 
 .circle-container {
     display: flex;
-    padding: 1rem 3rem;
+    justify-content: space-evenly;
+    align-items: center;
+
 }
 
 .circle {
+    content: "";
     padding: 5rem;
-    margin-bottom: 1rem;
+    margin: 0 1rem;
     border: 5px solid black;
     border-radius: 50%;
     pointer-events: none;
@@ -233,10 +236,6 @@ button:hover {
         box-shadow-animation infinite alternate 200ms ease-in-out,
         filter-animation infinite alternate 300ms linear;
  }
-
-.circle + .circle {
-    margin-left: 2rem;
-}
 
 .circle:nth-child(1) {
     background-color: var(--red-button)
