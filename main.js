@@ -70,7 +70,6 @@ function startGame() {
         const newActive = getRandomNumber(0, 3);
 
         if (newActive !== activeNumber) {
-            console.log(newActive);
             return newActive;
         } else {
             return pickNewNumber(activeNumber);
